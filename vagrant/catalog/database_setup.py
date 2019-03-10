@@ -27,3 +27,4 @@ class MenuItem(Base):
     restaurant = relationship(Restaurant)
 ### At the end of file ###
 engine = create_engine('sqlite:///restaurantmenu.db')
+Base.metadata.create_all(engine)
