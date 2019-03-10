@@ -3,7 +3,7 @@ from sqlalchemy.orm import sessionmaker
 from database_setup import Base, Restaurant, MenuItem
 
 # Which database engine we want to communicate with
-engine = create_engine('sqlite:///restaurant.db')
+engine = create_engine('sqlite:///restaurantmenu.db')
 # Bind the engine to the base class
 # Makes the connection between the class definition
 # and the corresponding tables within the database
