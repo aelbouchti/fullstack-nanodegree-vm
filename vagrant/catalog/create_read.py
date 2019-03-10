@@ -2,6 +2,7 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from database_setup import Base, Restaurant, MenuItem
 
+### CREATE ###
 # Which database engine we want to communicate with
 engine = create_engine('sqlite:///restaurantmenu.db')
 # Bind the engine to the base class
@@ -34,3 +35,9 @@ cheese_pizza = MenuItem(name="Cheese Pizza", description="Cheese",
 session.add(cheese_pizza)
 session.commit()
 session.query(MenuItem).all()
+
+### READ ###
+# Corresponds to a single row in my database 
+firstResult = session.query(Restaurant).first()
+# Give the name of the restaurant that is stored in the DB
+firstResult.name
